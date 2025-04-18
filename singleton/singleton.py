@@ -8,3 +8,5 @@ class Singleton:
 s1 = Singleton()
 s2 = Singleton()
 print(s1 is s2)
+
+# Note that __new__ is the creator of the object while __init__ is the Initializer of the object
