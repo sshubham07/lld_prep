@@ -1,6 +1,6 @@
 class Vehicle:
-    def __init__(self):
-        self.license_no = None
+    def __init__(self,license_no):
+        self.license_no = license_no
         self.ticket = None  # type: ParkingTicket
 
     def assign_ticket(self, ticket):

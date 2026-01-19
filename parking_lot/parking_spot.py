@@ -1,6 +1,6 @@
 class ParkingSpot:
-    def __init__(self):
-        self.id = None
+    def __init__(self,id):
+        self.id = id
         self.is_free = None
         self.vehicle = None  # type: Vehicle
 

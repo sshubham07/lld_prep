@@ -9,7 +9,7 @@ class ParkingLot:
 
         self.entrances = None       # dict: str -> Entrance
         self.exits = None           # dict: str -> Exit
-        self.spots = None           # dict: int -> ParkingSpot
+        self.spots = {}          # dict: int -> ParkingSpot
         self.tickets = None         # dict: str -> ParkingTicket
         self.display_boards = None  # list of DisplayBoard
 
@@ -37,4 +37,7 @@ class ParkingLot:
     def is_full(self, spot_type):
         pass
     def add_spot(self,spot):
+        self.spots[spot.id]=spot
+    
+    def get_all_spots(self):
         pass
