@@ -1,23 +1,23 @@
 class Vehicle:
-    def __init__(self,license_no):
+    def __init__(self, license_no):
         self.license_no = license_no
-        self.ticket = None  # type: ParkingTicket
+        self.ticket = None
 
     def assign_ticket(self, ticket):
-        pass
+        self.ticket = ticket
+        print(f"Ticket {ticket.ticket_id} assigned to vehicle {self.license_no}")
+
+    def remove_ticket(self):
+        self.ticket = None
 
 class Car(Vehicle):
-    def assign_ticket(self, ticket):
-        pass
+    pass
 
 class Van(Vehicle):
-    def assign_ticket(self, ticket):
-        pass
+    pass
 
 class Truck(Vehicle):
-    def assign_ticket(self, ticket):
-        pass
+    pass
 
 class Motorcycle(Vehicle):
-    def assign_ticket(self, ticket):
-        pass
+    pass
