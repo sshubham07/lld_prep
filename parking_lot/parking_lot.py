@@ -39,7 +39,7 @@ class ParkingLot:
 
     def get_parking_ticket(self, vehicle): ### work on this
         for spot in self.spots.values():
-            if spot.spot_type == vehicle.vehicle_type and spot.is_free:
+            if spot.is_free() and spot.can_fit_vehicle(vehicle):
                 spot.assign_vehicle(vehicle)
                 ticket = ParkingTicket(vehicle, spot)
                 self.tickets[ticket.id] = ticket
@@ -56,4 +56,4 @@ class ParkingLot:
         self.spots[spot.id]=spot
     
     def get_all_spots(self):
-        pass
+        return list(self.spots.values())

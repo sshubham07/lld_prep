@@ -33,8 +33,8 @@ def main():
     print(f"-> Car {car.license_no} arrives at entrance")
     ticket1 = entrance.get_ticket(car)
     print("-> Updating display board after parking:")
-    board.update(lot.get_all_spots())
-    board.show_free_slot()
+    #board.update(lot.get_all_spots())
+    board.show_free_slot(lot.get_all_spots())
 
     # SCENARIO 2: CUSTOMER EXITS AND PAYS
     print("\n→→→ SCENARIO 2: Customer exits and pays\n")
@@ -42,8 +42,8 @@ def main():
     time.sleep(1.5)
     exit_panel.validate_ticket(ticket1)
     print("-> Updating display board after exit:")
-    board.update(lot.get_all_spots())
-    board.show_free_slot()
+    #board.update(lot.get_all_spots())
+    board.show_free_slot(lot.get_all_spots())
 
     # SCENARIO 3: FILLING LOT AND REJECTING ENTRY IF FULL
     print("\n→→→ SCENARIO 3: Multiple customers attempt to enter; lot may become full\n")
@@ -62,16 +62,16 @@ def main():
     ticket5 = entrance.get_ticket(car2)
 
     print("-> Updating display board after several parkings:")
-    board.update(lot.get_all_spots())
-    board.show_free_slot()
+    #board.update(lot.get_all_spots())
+    board.show_free_slot(lot.get_all_spots())
 
     # Try to park another car (lot may now be full)
     car3 = Car("UP-01-CC-1001")
     print(f"-> Car {car3.license_no} attempts to park (should be denied if lot is full):")
     ticket6 = entrance.get_ticket(car3)
 
-    board.update(lot.get_all_spots())
-    board.show_free_slot()
+    #board.update(lot.get_all_spots())
+    board.show_free_slot(lot.get_all_spots())
 
     print("\n====================== END OF DEMONSTRATION ======================\n")
 
